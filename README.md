@@ -1,4 +1,4 @@
-# EXP-02-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON
+# EXP-01-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON
 
 AIM:  To interface a digital input (push button) and blink and LED upon activation.
 COMPONENTS REQUIRED:
@@ -67,15 +67,34 @@ FIGURE -03
 
 
 PROGRAM 
- 
- 
- 
- 
- 
+```
+int buttonstate = 0;
 
+void setup()
+{
+  pinMode(2, INPUT);
+  pinMode(12, OUTPUT);
+}
 
+void loop()
+{
+ buttonstate = digitalRead(2); //
+  if(buttonstate == HIGH)
+  {
+    digitalWrite(13, HIGH);
+  }else
+  {
+    digitalWrite(13, LOW);
+  }
+  delay(15);//
+}
+```
 
+ 
 Output of the simulation :
 
 [My image](username.github.com/repository/img/image.jpg)
+![Screenshot 2023-04-24 at 17-45-13 Amazing Turing Tinkercad](https://user-images.githubusercontent.com/118541549/233993800-85b4a403-e47e-492a-a421-4c07af4c3485.png)
+![Screenshot 2023-04-24 at 17-46-01 Amazing Turing Tinkercad](https://user-images.githubusercontent.com/118541549/233993834-c813efe3-c6a2-44af-bed1-2d3f777eb322.png)
+
 
